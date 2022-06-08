@@ -1,12 +1,15 @@
 @import './base/mixins';
 @import './base/variables';
+@import './blocks/header';
+@import './blocks/promo';
+@import './blocks/buttons';
 
 * {
   box-sizing: border-box;
+  font-family: 'MuseoSansCyrl', sans-serif;
 }
 
-body {
-}
-h1 {
-  font-weight: 900;
+.container {
+  max-width: 950px;
+  margin: 0 auto;
 }
