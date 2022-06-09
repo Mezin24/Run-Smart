@@ -1,0 +1,15 @@
+.consultation {
+  min-height: 680px;
+  background: gray url('../img/consult-bg.jpg') center center / cover no-repeat;
+  padding: 100px 0 108px;
+  &__descr {
+    margin-top: 8px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+  }
+  form {
+    margin-top: 36px;
+  }
+}

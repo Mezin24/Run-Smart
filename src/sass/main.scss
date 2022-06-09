@@ -4,6 +4,9 @@
 @import './blocks/promo';
 @import './blocks/buttons';
 @import './blocks/pros';
+@import './blocks/consultation';
+@import './blocks/section-title';
+@import './blocks/form-feed';
 
 * {
   box-sizing: border-box;
@@ -13,11 +16,4 @@
 .container {
   max-width: 950px;
   margin: 0 auto;
-}
-
-.section-title {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 30px;
-  color: #0d0d0d;
 }
