@@ -1,20 +1,24 @@
-$(document).ready(function () {
-  $('.carousel__inner').slick({
-    // autoplay: true,
-    autoplaySpeed: 2000,
-    infinite: true,
-    prevArrow:
-      '<button type="button" class="slick-prev"><img src="img/icons/chevron-left-solid.png" alt="chevron-left"></button>',
-    nextArrow:
-      '<button type="button" class="slick-next"><img src="img/icons/chevron-right-solid.png" alt="chevron-right"></button>',
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          dots: true,
-          arrows: false,
-        },
-      },
-    ],
-  });
+'use strict';
+
+const slider = tns({
+  container: '.carousel__inner',
+  items: 1,
+  slideBy: 1,
+  autoplay: true,
+  nav: true,
+  autoplayButtonOutput: false,
+  controls: false,
+  speed: 1000,
+  responsive: {
+    800: {
+      nav: false,
+    },
+  },
+});
+
+document.getElementById('prev').addEventListener('click', () => {
+  slider.goTo('prev');
+});
+document.getElementById('next').addEventListener('click', () => {
+  slider.goTo('next');
 });
