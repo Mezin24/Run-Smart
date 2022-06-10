@@ -19,9 +19,8 @@
     "sass": "^1.52.2"
   },
   "browserslist": [
-    "last 1 version",
-    "> 1%",
-    "mainteined node versions",
-    "not dead"
+    ">0.2%",
+    "not dead",
+    "not ie <= 11"
   ]
 }
