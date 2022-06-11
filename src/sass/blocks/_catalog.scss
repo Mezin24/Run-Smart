@@ -1,5 +1,8 @@
 .catalog {
   margin: 80px 0;
+  .container {
+    overflow-x: hidden;
+  }
   .section-title {
     font-weight: 400;
     font-size: 30px;
@@ -51,6 +54,7 @@
     min-height: 442px;
     border: 2px solid #e8e8e8;
     padding: 20px;
+    overflow: hidden;
 
     &__img {
       display: block;
@@ -101,14 +105,13 @@
     &__wrapper {
       display: flex;
       width: calc(200% + 40px);
-      overflow: hidden;
     }
     &__body {
       text-align: center;
       color: #0d0d0d;
       margin-right: 20px;
       width: 100%;
-      transition: all 0.5s ease-in;
+      transition: all 0.5s;
       transform: translateX(calc(-100% - 20px));
       margin-right: 0;
       &-active {
@@ -122,7 +125,7 @@
       padding-left: 32px;
       list-style-type: none;
       position: relative;
-      transition: all 0.5s ease-in;
+      transition: all 0.5s;
       transform: translateX(200%);
       &-active {
         transform: translateX(calc(-100% - 20px));
