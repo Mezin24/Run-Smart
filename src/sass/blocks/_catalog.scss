@@ -37,16 +37,21 @@
   }
   &__container {
     margin-top: 66px;
+    display: flex;
+    align-items: center;
+    display: none;
+    flex-wrap: wrap;
+    gap: 20px;
+    &-active {
+      display: flex;
+    }
   }
   &-item {
     width: 303px;
     min-height: 442px;
     border: 2px solid #e8e8e8;
     padding: 20px;
-    &__body {
-      text-align: center;
-      color: #0d0d0d;
-    }
+
     &__img {
       display: block;
       height: 200px;
@@ -92,6 +97,66 @@
       color: #050505;
       font-weight: 700;
       font-size: 20px;
+    }
+    &__wrapper {
+      display: flex;
+      width: calc(200% + 40px);
+      overflow: hidden;
+    }
+    &__body {
+      text-align: center;
+      color: #0d0d0d;
+      margin-right: 20px;
+      width: 100%;
+      transition: all 0.5s ease-in;
+      transform: translateX(calc(-100% - 20px));
+      margin-right: 0;
+      &-active {
+        transform: translateX(0);
+      }
+    }
+    &__list {
+      margin-left: 20px;
+      width: 100%;
+      margin-bottom: 0;
+      padding-left: 32px;
+      list-style-type: none;
+      position: relative;
+      transition: all 0.5s ease-in;
+      transform: translateX(200%);
+      &-active {
+        transform: translateX(calc(-100% - 20px));
+      }
+
+      li {
+        position: relative;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 24px;
+        color: #555;
+        margin-bottom: 10px;
+
+        &:before {
+          content: '';
+          display: block;
+          width: 8px;
+          height: 8px;
+          background-color: $main-color;
+          position: absolute;
+          top: 7px;
+          left: -17px;
+        }
+      }
+    }
+    &__back {
+      color: $main-color;
+      text-decoration: underline;
+      font-weight: 500;
+      font-size: 14px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 }
