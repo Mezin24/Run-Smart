@@ -80,3 +80,53 @@ function toggleItem(frontSelector, backSelector) {
 
 toggleTabs('.catalog__tab', '.catalog__container');
 toggleItem('.catalog-item__link', '.catalog-item__back');
+
+//////////// MODAL
+
+const consultBtns = document.querySelectorAll('[data-modal="consultation"]');
+const orderBtns = document.querySelectorAll('button.btn-catalog');
+const closeBtn = document.querySelectorAll('.modal__close');
+const overlay = document.querySelector('.overlay');
+const closeBtns = document.querySelectorAll('.modal__close');
+
+function openModal(id) {
+  const modal = document.getElementById(id);
+  modal.style.display = 'block';
+  overlay.style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(e) {
+  overlay.style.display = 'none';
+  document.body.style.overflow = 'scroll';
+  e.target.closest('.modal').style.display = 'none';
+}
+
+consultBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    openModal('consultation');
+  });
+});
+
+orderBtns.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    const title = e.target
+      .closest('.catalog-item')
+      .querySelector('.catalog-item__title').textContent;
+    document
+      .getElementById('order')
+      .querySelector('.modal__subtitle').textContent = title;
+
+    openModal('order');
+  });
+});
+
+closeBtns.forEach((btn) => {
+  btn.addEventListener('click', closeModal);
+});
+
+overlay.addEventListener('click', (e) => {
+  if (e.target === overlay) {
+    closeModal();
+  }
+});

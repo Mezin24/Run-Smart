@@ -30,7 +30,9 @@
           </div>
           <div class="header__contacts">
             <a href="tel:+74999228974">+7 (499) 922-89-74</a>
-            <button class="btn">заказать звонок</button>
+            <button data-modal="consultation" class="btn">
+              заказать звонок
+            </button>
           </div>
         </header>
         <div class="promo__wrapper">
@@ -51,7 +53,9 @@
               на все вопросы
             </div>
           </div>
-          <button class="btn btn-main">заказать кОНСУЛЬТАЦИЮ</button>
+          <button data-modal="consultation" class="btn btn-main">
+            заказать кОНСУЛЬТАЦИЮ
+          </button>
           <div class="promo__link">или <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a></div>
         </div>
       </div>
@@ -217,7 +221,7 @@
                   alt="sport watch"
                   class="catalog-item__img"
                 />
-                <div class="catalog-item__title">Пульсометр Polar FT1</div>
+                <div class="catalog-item__title">Пульсометр Suunto M2</div>
                 <div class="catalog-item__descr">
                   Для первых шагов в тренировках, основанных на сердечном ритме
                 </div>
@@ -242,8 +246,8 @@
             <hr />
             <footer class="catalog-item__footer">
               <div class="catalog-item__prices">
-                <div class="catalog-item__old-price">4 750 руб</div>
-                <div class="catalog-item__price">4 500 руб.</div>
+                <div class="catalog-item__old-price">6 690 руб.</div>
+                <div class="catalog-item__price">6 641 руб.</div>
               </div>
               <button class="btn btn-catalog">КУПИТЬ</button>
             </footer>
@@ -295,7 +299,7 @@
                   alt="sport watch"
                   class="catalog-item__img"
                 />
-                <div class="catalog-item__title">Пульсометр Polar FT1</div>
+                <div class="catalog-item__title">Пульсометр Suunto M2</div>
                 <div class="catalog-item__descr">
                   Для первых шагов в тренировках, основанных на сердечном ритме
                 </div>
@@ -334,7 +338,7 @@
                   alt="sport watch"
                   class="catalog-item__img"
                 />
-                <div class="catalog-item__title">Пульсометр Polar FT1</div>
+                <div class="catalog-item__title">Пульсометр Suunto M2</div>
                 <div class="catalog-item__descr">
                   Для первых шагов в тренировках, основанных на сердечном ритме
                 </div>
@@ -373,7 +377,7 @@
                   alt="sport watch"
                   class="catalog-item__img"
                 />
-                <div class="catalog-item__title">Пульсометр Polar FT1</div>
+                <div class="catalog-item__title">Пульсометр Polar FT4</div>
                 <div class="catalog-item__descr">
                   Для первых шагов в тренировках, основанных на сердечном ритме
                 </div>
@@ -398,8 +402,8 @@
             <hr />
             <footer class="catalog-item__footer">
               <div class="catalog-item__prices">
-                <div class="catalog-item__old-price">4 750 руб</div>
-                <div class="catalog-item__price">4 500 руб.</div>
+                <div class="catalog-item__old-price">6 690 руб.</div>
+                <div class="catalog-item__price">6 641 руб.</div>
               </div>
               <button class="btn btn-catalog">КУПИТЬ</button>
             </footer>
@@ -620,6 +624,54 @@
         </div>
       </div>
     </footer>
+
+    <div class="overlay">
+      <div class="modal" id="consultation">
+        <button class="modal__close">&times;</button>
+        <h2 class="modal__title">Просто заполните форму заявки</h2>
+        <div class="modal__subtitle">
+          и мы перезвоним вам в течении 10 минут
+        </div>
+        <form action="#" class="form-feed">
+          <input type="text" placeholder="Ваше имя" name="name" required />
+          <input
+            type="number"
+            placeholder="Ваш телефон"
+            name="phone"
+            required
+          />
+          <input type="email" placeholder="Ваш E-mail" name="email" required />
+          <button type="submit" class="btn btn-submit">
+            заказать кОНСУЛЬТАЦИЮ
+          </button>
+        </form>
+      </div>
+      <div class="modal" id="order">
+        <button class="modal__close">&times;</button>
+        <h2 class="modal__title">Ваш заказ:</h2>
+        <div class="modal__subtitle">Пульсометр Polar FT1</div>
+        <form action="#" class="form-feed">
+          <input type="text" placeholder="Ваше имя" name="name" required />
+          <input
+            type="number"
+            placeholder="Ваш телефон"
+            name="phone"
+            required
+          />
+          <input type="email" placeholder="Ваш E-mail" name="email" required />
+          <button type="submit" class="btn btn-submit">
+            заказать кОНСУЛЬТАЦИЮ
+          </button>
+        </form>
+      </div>
+      <div class="modal modal__mini" id="thanks">
+        <button class="modal__close">&times;</button>
+        <h2 class="modal__title">Спасибо за вашу заявку!</h2>
+        <div class="modal__subtitle">
+          Наш менеджер свяжется с вами в ближайшее время!
+        </div>
+      </div>
+    </div>
 
     <script src="js/tiny-slider.js"></script>
     <script src="js/script.js"></script>
