@@ -164,4 +164,33 @@ $(document).ready(() => {
   ///////// PHONE INPUT MASK
 
   $("input[name='phone']").mask('+7(999) 999-99-99');
+
+  //////// MAILER
+  $('form').submit(function (e) {
+    e.preventDefault();
+
+    if (!$(this).valid()) {
+      return;
+    }
+
+    $.ajax({
+      type: 'POST',
+      url: 'mailer/smart.php',
+      data: $(this).serialize(),
+    }).done(function () {
+      $(this).find('input').val('');
+
+      $('form').trigger('reset');
+    });
+    return false;
+  });
+
+  /////SMOOTH SCROLL
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 1600) {
+      $('.pageup').fadeIn();
+    } else {
+      $('.pageup').fadeOut();
+    }
+  });
 });

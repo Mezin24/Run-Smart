@@ -13,10 +13,15 @@
 @import './blocks/footer';
 @import './blocks/modal';
 @import './blocks/media';
+@import './blocks/pageup';
 
 * {
   box-sizing: border-box;
   font-family: 'MuseoSansCyrl', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
