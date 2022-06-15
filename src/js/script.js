@@ -193,4 +193,6 @@ $(document).ready(() => {
       $('.pageup').fadeOut();
     }
   });
+
+  new WOW().init();
 });
