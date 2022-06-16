@@ -164,6 +164,14 @@
       margin-top: 40px;
     }
   }
+  .overlay {
+    .modal {
+      max-width: 95%;
+      &__close {
+        right: 10px;
+      }
+    }
+  }
 }
 
 @media (max-width: 385px) {
@@ -176,5 +184,8 @@
   .btn-main {
     width: 240px;
     font-size: 14px;
+  }
+  .form-feed {
+    max-width: 100%;
   }
 }
